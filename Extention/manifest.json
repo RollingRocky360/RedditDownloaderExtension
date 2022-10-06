@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "RedditDownloader",
+    "description": "Adds convenient buttons to Reddit posts to download that post",
+    "version": "1.0",
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.reddit.com/*"],
+            "css": ["linkstyle.css"],
+            "js": ["linkadder.js"]
+        },
+        {
+            "matches": ["https://*.reddit.com/r/*/comments/*"],
+            "css": ["linkstyle.css"],
+            "js": ["linkadderspecific.js"]
+        }
+    ]
+}
