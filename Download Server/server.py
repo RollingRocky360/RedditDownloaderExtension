@@ -26,7 +26,7 @@ def download():
 
         return send_file(filebytes, as_attachment=True, download_name=filename)
     except DownloadError:
-        return f"<h3>{info['title']}</h3>"
+        return f"<h3>Post did not contain any downloadable media</h3>"
 
 
 if __name__ == '__main__':

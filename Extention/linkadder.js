@@ -1,12 +1,12 @@
-doc = document;
-
 const prefix = "http://localhost:5000/download?url=";
 
-const loadLinks = () => {
-    const posts = document.querySelectorAll('div [data-testid=post-container]');
+console.log('hello from adder');
+const loadLinks = (e) => {
+    const posts = document.querySelectorAll('div[data-testid=post-container]');
+    if (!posts) return;
     console.log(posts.length);
     for (let post of posts) {
-        const url = encodeURIComponent(post.querySelector('[data-click-id=comments]').href);
+        const url = encodeURIComponent(post.querySelector('a[data-click-id=comments]').href);
         const space = post.querySelector('._21pmAV9gWG6F_UKVe7YIE0');
         if (space.innerHTML !== '') { continue; }
         space.innerHTML = `
@@ -18,5 +18,5 @@ const loadLinks = () => {
     }
 }
 
-document.addEventListener('DOMContentLoaded', loadLinks);
-document.querySelector('body').onscroll = loadLinks;
+window.addEventListener('load', loadLinks);
+document.querySelector('body').addEventListener('scroll', loadLinks);

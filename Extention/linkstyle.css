@@ -21,10 +21,11 @@
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
     font-feature-settings: 'liga';
-    margin-right: .15rem;
+    margin: 0 .15rem 0 0;
 }
 
 ._21pmAV9gWG6F_UKVe7YIE0 {
+    margin: unset;
     width: unset;
     display: flex;
     align-items: center;
@@ -35,11 +36,12 @@
     margin: .2rem auto;
     gap: .2rem;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .inner-link {
     height: 98.5%;
-    padding: 0 .35rem;
+    padding: 0 .40rem 0 0.35rem;
     margin: .1rem;
     border-radius: 2px;
     display: flex;

@@ -6,14 +6,14 @@
 
     "content_scripts": [
         {
-            "matches": ["https://*.reddit.com/*"],
-            "css": ["linkstyle.css"],
-            "js": ["linkadder.js"]
-        },
-        {
-            "matches": ["https://*.reddit.com/r/*/comments/*"],
+            "matches": ["https://www.reddit.com/r/*/comments/*/*"],
             "css": ["linkstyle.css"],
             "js": ["linkadderspecific.js"]
+        },
+        {
+            "matches": ["https://www.reddit.com/*"],
+            "css": ["linkstyle.css"],
+            "js": ["linkadder.js"]
         }
     ]
 }
