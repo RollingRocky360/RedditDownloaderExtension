@@ -12,7 +12,6 @@
     font-style: normal;
     font-size: 24px;
     line-height: 1;
-    margin-right: .2rem;
     letter-spacing: normal;
     text-transform: none;
     display: inline-block;
@@ -20,8 +19,9 @@
     word-wrap: normal;
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
-    font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'liga';
+    margin-right: .15rem;
 }
 
 ._21pmAV9gWG6F_UKVe7YIE0 {
@@ -38,23 +38,16 @@
 }
 
 .inner-link {
-    height: 98%;
+    height: 98.5%;
     padding: 0 .35rem;
     margin: .1rem;
     border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-@media (prefers-color-scheme: light) {
-    .inner-link:hover {
-        background-color: #898E93;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .inner-link:hover {
-        background-color: #2D2D2E;
-    }
+.inner-link:hover {
+    background-color: var(--newRedditTheme-navIconFaded10);
 }

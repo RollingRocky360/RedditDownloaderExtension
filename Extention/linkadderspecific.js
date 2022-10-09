@@ -1,7 +1,7 @@
 doc = document;
 
 
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
     const prefix = "http://localhost:5000/download?url=";
 
     
@@ -10,9 +10,9 @@ window.onload = () => {
     space.insertAdjacentHTML("beforeend", 
         `
             <a target="download" class="inner-link" href=${prefix+url} style="height: 98%;">
-            <span class="material-symbols-outlined">download_for_offline</span>
+            <span class="material-symbols-outlined">download</span>
             Download
             </a>
         `
     );
-}
+});

@@ -11,14 +11,12 @@ const loadLinks = () => {
         if (space.innerHTML !== '') { continue; }
         space.innerHTML = `
         <a target="download" class="inner-link" href=${prefix+url}>
-        <span class="material-symbols-outlined">download_for_offline</span>
+        <span class="material-symbols-outlined">download</span>
         Download
         </a>
         `;
     }
 }
 
-let tick = false;
-
-window.onload = loadLinks;
+document.addEventListener('DOMContentLoaded', loadLinks);
 document.querySelector('body').onscroll = loadLinks;
